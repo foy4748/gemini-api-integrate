@@ -1,6 +1,6 @@
 # Instructions
 
-- First go to (Google AI Studio)[https://aistudio.google.com/]
+- First go to [Google AI Studio](https://aistudio.google.com/)
 - Accept Terms \& Conditions. (For first time only)
   <img src="./doc/images/00_Accept_terms_and_conditions.png" alt="Accept Terms and conditions"/>
 - Then Click [Get API Key] button at the left-upper corner. Then click [Create API Key] button. Accept any terms they want you to accept.
@@ -17,7 +17,7 @@
 
   <img src="./doc/images/03_Add_gitignore.png" alt="Add .gitignore file"/>
 
-- Then go to the (Docs Page)[https://ai.google.dev/docs]. And go to (Get Started with Node)[https://ai.google.dev/tutorials/get_started_node#add-sdk] and follow instructions. First you can simply install the npm package that they are providing.
+- Then go to the [Docs Page](https://ai.google.dev/docs). And go to [Get Started with Node](https://ai.google.dev/tutorials/get_started_node#add-sdk) and follow instructions. First you can simply install the npm package that they are providing.
 
 ```console
 npm install @google/generative-ai
