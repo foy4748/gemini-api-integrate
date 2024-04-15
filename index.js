@@ -28,8 +28,8 @@ app.get("/", (req, res) => {
 })
 
 // Interacting with Gemini API
-app.post("/", async (req, res) => {
-    console.log(req.body);
+app.post("/gemini-ai", async (req, res) => {
+    //console.log(req.body);
     const { prompt } = req.body
     //========
     // For text-only input, use the gemini-pro model
@@ -53,4 +53,10 @@ app.post("/", async (req, res) => {
 // ------------------------------
 
 // Port Listening
-app.listen(PORT, () => console.log(`SERVER is UP and RUNNING at port ${PORT}\nLocal Address: http://localhost:${PORT}`))
+app.listen(PORT, () => {
+    console.log(`
+    SERVER is UP and RUNNING at port - ${PORT}
+    Local Address: http://localhost:${PORT}
+    `
+    )
+})
