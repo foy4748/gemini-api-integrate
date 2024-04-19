@@ -2,6 +2,7 @@
 const dotenv = require("dotenv");
 const express = require("express");
 const cors = require("cors");
+const geminiService = require("./geminiService");
 
 // Gemini Related Package import
 const { GoogleGenerativeAI } = require("@google/generative-ai");
@@ -31,23 +32,13 @@ app.get("/", (req, res) => {
 app.post("/gemini-ai", async (req, res) => {
     //console.log(req.body);
     const { prompt } = req.body
-    //========
-    // For text-only input, use the gemini-pro model
-    const genAI = new GoogleGenerativeAI(process.env.GEMINI_SECRET_KEY);
-    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 
-    //const prompt = "Write a story about a magic backpack."
-
-    const result = await model.generateContent(prompt);
-    const response = await result.response;
-    const text = response.text();
-    //console.log(text);
-    //========
+    const gemini_response = await geminiService(prompt);
 
     res.send({
         error: false,
         message: "POST successful",
-        gemini_response: text
+        gemini_response
     })
 })
 // ------------------------------
